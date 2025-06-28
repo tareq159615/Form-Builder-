@@ -34,12 +34,16 @@ const FormField: React.FC<FormFieldProps> = ({
         <label>
           {field.label}
           <textarea
-            value={field.value}
-            onChange={handleChange}
-            className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        value={field.value}
+        onChange={handleChange}
+        className="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </label>
-        <button type="button" onClick={() => onRemove(index)}>
+        <button
+          type="button"
+          onClick={() => onRemove(index)}
+          className="mt-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
+        >
           Remove
         </button>
       </div>
